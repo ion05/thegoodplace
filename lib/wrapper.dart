@@ -35,10 +35,10 @@ class _WrapperState extends State<Wrapper> {
             //   print(e.toString());
             //   return RegisterScreen();
             // }
-            return RegisterScreen();
-          } else {
             return HomeScreen();
-          }
+          } //else {
+
+          //}
         }
         return CreatingLoader();
       },
