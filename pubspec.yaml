@@ -34,6 +34,9 @@ dependencies:
   google_sign_in: ^5.0.3
   sign_button: ^2.0.0
   hexcolor: ^2.0.3
+  hexcolor: ^2.0.3
+  easy_gradient_text: ^1.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
