@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "626222709992",
+    "project_id": "the-good-place-4c538",
+    "storage_bucket": "the-good-place-4c538.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626222709992:android:aa25b8087eab4b6f5d1d5d",
+        "android_client_info": {
+          "package_name": "com.ion.thegoodplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626222709992-pvkumrfqu3pfqvllccfoeid8lda374u3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZpsEF6ORFkdq3EoLTZma9haef80pLVBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626222709992-pvkumrfqu3pfqvllccfoeid8lda374u3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
