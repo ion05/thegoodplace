@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:thegoodplace/loaders/creating.dart';
 import 'package:thegoodplace/screens/home.dart';
+import 'package:thegoodplace/wrapper.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,9 +24,10 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'The Good Place',
             routes: {},
-            home: HomeScreen(),
+            home: Wrapper(),
           );
         }
+        return CircularProgressIndicator();
       },
     );
   }
