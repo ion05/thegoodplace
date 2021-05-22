@@ -47,7 +47,7 @@ class _AngryPageState extends State<AngryPage> {
               Row(
                 children: [
                   SizedBox(
-                    width: 20.0,
+                    width: 10.0,
                   ),
                   ElevatedButton.icon(
                     icon: Icon(Icons.mode_comment, color: Colors.black),
@@ -68,7 +68,7 @@ class _AngryPageState extends State<AngryPage> {
                         colors: <Color>[
                          HexColor('#ff8a78'), HexColor('#ff7275'), HexColor('#ff3f6f'),
                         ],
-                        style: TextStyle(fontSize: 24.0),
+                        style: TextStyle(fontSize: 18.0),
                       ),
                     ),
                   ),
@@ -94,7 +94,7 @@ class _AngryPageState extends State<AngryPage> {
                         colors: <Color>[
             HexColor('#ff8a78'), HexColor('#ff7275'), HexColor('#ff3f6f'),
                         ],
-                        style: TextStyle(fontSize: 24.0),
+                        style: TextStyle(fontSize: 18.0),
                       ),
                     ),
                   ),
