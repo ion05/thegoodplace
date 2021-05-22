@@ -272,7 +272,6 @@ class Item1 extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
-          Icon(Icons.chevron_left),
           SizedBox(
             width: 40.0,
           ),
