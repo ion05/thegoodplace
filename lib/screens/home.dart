@@ -22,6 +22,20 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TextButton(
+              child: Text('Happy'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/happy');
+              },
+            )
+          ],
+        ),
+      ),
     );
   }
 }
