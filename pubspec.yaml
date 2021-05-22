@@ -35,6 +35,8 @@ dependencies:
   sign_button: ^2.0.0
   hexcolor: ^2.0.3
   url_launcher: ^6.0.4
+  easy_gradient_text: ^1.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
