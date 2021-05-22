@@ -62,12 +62,11 @@ class _AngryPageState extends State<AngryPage> {
                           ),
                         )),
                     label: Padding(
-                      padding: EdgeInsets.all(15.0),
+                      padding: EdgeInsets.all(10.0),
                       child: GradientText(
                         text: 'Submit',
                         colors: <Color>[
-                          HexColor('#8BC6EC'),
-                          HexColor('#9599E2')
+                         HexColor('#ff8a78'), HexColor('#ff7275'), HexColor('#ff3f6f'),
                         ],
                         style: TextStyle(fontSize: 24.0),
                       ),
@@ -89,12 +88,11 @@ class _AngryPageState extends State<AngryPage> {
                           ),
                         )),
                     label: Padding(
-                      padding: EdgeInsets.all(15.0),
+                      padding: EdgeInsets.all(10.0),
                       child: GradientText(
                         text: 'Scream Zone',
                         colors: <Color>[
-                          HexColor('#8BC6EC'),
-                          HexColor('#9599E2')
+            HexColor('#ff8a78'), HexColor('#ff7275'), HexColor('#ff3f6f'),
                         ],
                         style: TextStyle(fontSize: 24.0),
                       ),
