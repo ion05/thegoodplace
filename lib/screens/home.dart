@@ -64,7 +64,9 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 70.0,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/happy');
+              },
               style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.white),
@@ -77,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(15.0),
                 child: GradientText(
                   text: 'Happy',
+
                   colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
                   style: TextStyle(fontSize: 24.0),
                 ),
