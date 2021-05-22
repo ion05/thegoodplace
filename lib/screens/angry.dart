@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:easy_gradient_text/easy_gradient_text.dart';
 
 class AngryPage extends StatefulWidget {
   @override
@@ -40,17 +41,54 @@ class _AngryPageState extends State<AngryPage> {
                   SizedBox(
                     width: 50.0,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Submit'),
+                  ElevatedButton.icon(
+                  icon: Icon(Icons.mode,
+                      color: Colors.black),
+                  onPressed: () {
+                  },
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      )),
+                  label: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: GradientText(
+                      text: 'Submit',
+                      colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                      style: TextStyle(fontSize: 24.0),
+                    ),
                   ),
+                ),
                   SizedBox(
                     width: 30.0,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Scream Zone'),
+                  ElevatedButton.icon(
+                  icon: Icon(Icons.trending_flat,
+                      color: Colors.black),
+                  onPressed: () {
+                    
+                  },
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      )),
+                  label: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: GradientText(
+                      text: 'Scream Zone',
+                      colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                      style: TextStyle(fontSize: 24.0),
+                    ),
                   ),
+                ),
                 ],
               ),
               SizedBox(
