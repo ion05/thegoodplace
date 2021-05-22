@@ -4,6 +4,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:thegoodplace/loaders/creating.dart';
 import 'package:thegoodplace/screens/happy.dart';
 import 'package:thegoodplace/screens/home.dart';
+import 'package:thegoodplace/screens/sad.dart';
 import 'package:thegoodplace/wrapper.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
             routes: {
               '/question' : (context) => HomeScreen(),
               '/happy': (context) => HappyPage(),
-
+              '/sad': (context) => SadPage(),
             },
             home: Wrapper(),
           );
