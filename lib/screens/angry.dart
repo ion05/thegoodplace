@@ -25,7 +25,7 @@ class _AngryPageState extends State<AngryPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Here's what you can do!"),
+              Text("Here's what you can do!",style: TextStyle(fontSize: 36.0, fontWeight:FontWeight.w700, color: Colors.white, fontFamily: "Nunito-Sans",),
               SizedBox(
                 height: 30.0,
               ),
