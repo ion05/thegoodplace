@@ -143,120 +143,132 @@ class _SadPageState extends State<SadPage> {
                       'Here are Some Spotify Playlists for you',
                       style: TextStyle(fontFamily: 'Nunito-Sans', fontSize: 15.0),
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        ElevatedButton(
-                            onPressed: () {
-                              launch("https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=eT9qOIiUTIifeoKakII1DA&utm_source=copy-link&nd=1");
-                            },
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 75.0,
-                                  width: 75.0,
-                                  image: AssetImage("assets/images/darkstormy.jpg"),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Text('Dark & Stormy', style: TextStyle(fontSize: 18.0, fontFamily: 'OpenSans-Condensed')),
-                                SizedBox(
-                                  height: 2.0,
-                                  width: 10.0,
-                                ),
-                              ],
-                            ),
-                            style: ButtonStyle(
-                              padding: MaterialStateProperty.all(EdgeInsets.zero),
-                            )),
-                        SizedBox(height: 10.0),
-                        ElevatedButton(
-                            onPressed: () {
-                              launch("https://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634?si=i9KfcfHmQFGOw96W2PL_dA&utm_source=copy-link&nd=1");
-                            },
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 75.0,
-                                  width: 75.0,
-                                  image: AssetImage("assets/images/lifesucks.jpg"),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Text('Life Sucks', style: TextStyle(fontSize: 18.0, fontFamily: 'OpenSans-Condensed')),
-                                SizedBox(
-                                  height: 2.0,
-                                  width: 12.0,
-                                ),
-                              ],
-                            ),
-                            style: ButtonStyle(
-                              padding: MaterialStateProperty.all(EdgeInsets.zero),
-                            )),
-                      ],
-                    ),
                     SizedBox(
                       height: 10.0,
                     ),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
-                            onPressed: () {
-                              launch("https://open.spotify.com/playlist/37i9dQZF1DWVrtsSlLKzro?si=z5IfZdzuTu6_izwGVbarYQ&utm_source=copy-link");
-                            },
+                          onPressed: () {
+                            launch("https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=nkpyyJFLRl-DwL-orODvHA&utm_source=copy-link");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Row(
                               children: [
                                 Image(
-                                  height: 75.0,
-                                  width: 75.0,
-                                  image: AssetImage("assets/images/sadbeats.jpg"),
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage("assets/images/darkstormy.png"),
                                 ),
                                 SizedBox(
-                                  width: 10.0,
+                                  width: 7.5,
                                 ),
-                                Text('Sad Beats', style: TextStyle(fontSize: 18.0, fontFamily: 'OpenSans-Condensed')),
+                                Text(
+                                  'Vibe',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: 'OpenSans-Condensed',
+                                    color: Colors.black,
+                                  ),
+                                ),
                                 SizedBox(
                                   height: 2.0,
                                   width: 10.0,
                                 ),
                               ],
                             ),
-                            style: ButtonStyle(
-                              padding: MaterialStateProperty.all(EdgeInsets.zero),
-                            )),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 2.0,
+                          width: 10.0,
+                        ),
                         SizedBox(height: 10.0),
                         ElevatedButton(
-                            onPressed: () {
-                              launch("https://open.spotify.com/playlist/37i9dQZF1DX6xZZEgC9Ubl?si=JNhizU_yQcCj5M6CBmsxXw&utm_source=copy-link");
-                            },
+                          onPressed: () {
+                            launch("https://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634?si=YOfeECGmRTCy8JSHGu9GGg&utm_source=copy-link");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Row(
                               children: [
                                 Image(
-                                  height: 75.0,
-                                  width: 75.0,
-                                  image: AssetImage("assets/images/teardrop.jpg"),
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage("assets/images/lifesucks.png"),
                                 ),
                                 SizedBox(
-                                  width: 10.0,
+                                  width: 7.0,
                                 ),
-                                Text('Tear Drop', style: TextStyle(fontSize: 18.0, fontFamily: 'OpenSans-Condensed')),
+                                Text('Mood Booster',
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'OpenSans-Condensed',
+                                      color: Colors.black,
+                                    )),
                                 SizedBox(
                                   height: 2.0,
-                                  width: 12.0,
+                                  width: 10.0,
                                 ),
                               ],
                             ),
-                            style: ButtonStyle(
-                              padding: MaterialStateProperty.all(EdgeInsets.zero),
-                            )),
+                          ),
+                        ),
+                        SizedBox(height: 10.0),
+                                ElevatedButton(
+                          onPressed: () {
+                            launch("https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=c692d291c6ee45d0");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage("assets/images/lifesucks.png"),
+                                ),
+                                SizedBox(
+                                  width: 7.0,
+                                ),
+                                Text('Happy-O-Happy',
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'OpenSans-Condensed',
+                                      color: Colors.black,
+                                    )),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
