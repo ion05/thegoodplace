@@ -104,7 +104,7 @@ class _AngryPageState extends State<AngryPage> {
                 height: 30.0,
               ),
               Text(
-                  'Do check our Spotify playlist that might create that vibe for you'),
+                  'Do check our Spotify playlist that might create that vibe for you', style: TextStyle(color:Colors.white, fontWeight: FontWeight.w300,)),
               SizedBox(
                 height: 10.0,
               ),
