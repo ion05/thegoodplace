@@ -178,7 +178,8 @@ class _AngryPageState extends State<AngryPage> {
                       SizedBox(
                         height: 15.0,
                       ),
-                      Text(advicetoshow),
+                      Text(advicetoshow ,style: TextStyle(color: Colors.white,)),
+                      SizedBox(height: 5.0,),
                       Text(
                           'Check out our Spotify playlist that might create the vibe for you',
                           style: TextStyle(
