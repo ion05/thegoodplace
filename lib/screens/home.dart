@@ -79,6 +79,51 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(15.0),
                 child: GradientText(
                   text: 'Happy',
+
+                  colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                  style: TextStyle(fontSize: 24.0),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+              ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                  )),
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: GradientText(
+                  text: 'Angry',
+                  colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                  style: TextStyle(fontSize: 24.0),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+              ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                  )),
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: GradientText(
+                  text: 'Sad',
                   colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
                   style: TextStyle(fontSize: 24.0),
                 ),
