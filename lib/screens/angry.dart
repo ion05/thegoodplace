@@ -97,6 +97,71 @@ class _AngryPageState extends State<AngryPage> {
               Text(
                   'Do check our Spotify playlist that might create that vibe for you'),
             ],
+             SizedBox(
+               height: 10.0,
+          ),
+          Row(
+             children: [
+                        ElevatedButton(
+                            onPressed: () {
+                              launch(
+                                  "https://open.spotify.com/playlist/37i9dQZF1DX7yRWDZJQ3Yz?si=-xt9mYF6R36YzfbLmEkwvw&utm");
+                            },
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 75.0,
+                                  width: 75.0,
+                                  image:
+                                      AssetImage("assets/images/vibe.png"),
+                                ),
+                                Text('Vibe',
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: 'OpenSans-Condensed')),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                            style: ButtonStyle(
+                              padding:
+                                  MaterialStateProperty.all(EdgeInsets.zero),
+                            )),
+                        SizedBox(
+                          height: 2.0,
+                          width: 10.0,
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              launch(
+                                  "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=JzsnHyQ8Qs69ApAMHt39KA&utm");
+                            },
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 75.0,
+                                  width: 75.0,
+                                  image: AssetImage(
+                                      "assets/images/mood.png"),
+                                ),
+                                Text('Mood Booster',
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: 'OpenSans-Condensed')),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                            style: ButtonStyle(
+                              padding:
+                                  MaterialStateProperty.all(EdgeInsets.zero),
+                            ))
+                      ],
+                
           ),
         ),
       ),
