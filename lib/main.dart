@@ -6,6 +6,7 @@ import 'package:thegoodplace/screens/angry.dart';
 import 'package:thegoodplace/screens/happy.dart';
 import 'package:thegoodplace/screens/home.dart';
 import 'package:thegoodplace/screens/sad.dart';
+import 'package:thegoodplace/screens/screamzone.dart';
 import 'package:thegoodplace/wrapper.dart';
 
 void main() {
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
               '/question': (context) => HomeScreen(),
               '/happy': (context) => HappyPage(),
               '/sad': (context) => SadPage(),
-              '/angry': (context) => AngryPage()
+              '/angry': (context) => AngryPage(),
+              '/scream': (context) => ScreamZone(),
             },
             home: Wrapper(),
           );
