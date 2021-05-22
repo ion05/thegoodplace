@@ -58,6 +58,9 @@ flutter:
       fonts:
         - asset: assets/fonts/RobotoCondensed-Bold.ttf
         - asset: assets/fonts/RobotoCondensed-Regular.ttf
+    - family: Nunito-Sans
+      fonts: 
+        - asset: assets/fonts/NunitoSans-Black.ttf
   assets:
     - assets/images/happyhits.jpg
     - assets/images/feelgoodpiano.jpg
