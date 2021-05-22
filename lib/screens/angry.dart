@@ -162,7 +162,8 @@ class _AngryPageState extends State<AngryPage> {
                         borderRadius: BorderRadius.circular(30.0),
                       ),
                     )),
-                child: Row(
+                child:  Padding( 
+                  padding: EdgeInsets.all(5.0),(Row(
                   children: [
                     Image(
                       height: 55.0,
@@ -178,7 +179,7 @@ class _AngryPageState extends State<AngryPage> {
                       width: 10.0,
                     ),
                   ],
-                ),
+                ),),
               )
             ],
           ),
