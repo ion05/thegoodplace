@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       )),
                   label: Padding(
-                    padding: EdgeInsets.all(15.0),
+                    padding: EdgeInsets.all(10.0),
                     child: GradientText(
                       text: 'Happy',
                       colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
@@ -91,6 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(
                   height: 20.0,
+                  width: 5.0,
                 ),
                 ElevatedButton.icon(
                   onPressed: () {
