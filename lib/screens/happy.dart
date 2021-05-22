@@ -189,7 +189,7 @@ class _HappyFormState extends State<HappyForm> {
                                 .set({
                               "whyhappy": whyhappy,
                               "advicetosad": advicetosad,
-                              "advicetoanrgy": advicetoangry,
+                              "advicetoangry": advicetoangry,
                             }).then((value) => print('Response Noted'));
                             setState(() {
                               loading = false;
@@ -238,7 +238,9 @@ class _HappyFormState extends State<HappyForm> {
                               padding:
                                   MaterialStateProperty.all(EdgeInsets.zero),
                             )),
-                        SizedBox(height: 10.0,),
+                        SizedBox(
+                          height: 10.0,
+                        ),
                         ElevatedButton(
                             onPressed: () {
                               launch(
