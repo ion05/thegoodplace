@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:thegoodplace/loaders/creating.dart';
+import 'package:thegoodplace/screens/angry.dart';
 import 'package:thegoodplace/screens/happy.dart';
 import 'package:thegoodplace/screens/home.dart';
 import 'package:thegoodplace/screens/sad.dart';
@@ -26,9 +27,10 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'The Good Place',
             routes: {
-              '/question' : (context) => HomeScreen(),
+              '/question': (context) => HomeScreen(),
               '/happy': (context) => HappyPage(),
               '/sad': (context) => SadPage(),
+              '/angry': (context) => AngryPage()
             },
             home: Wrapper(),
           );

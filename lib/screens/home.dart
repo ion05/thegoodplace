@@ -93,7 +93,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 20.0,
                 ),
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/angry');
+                  },
                   icon: Icon(
                     Icons.sentiment_dissatisfied,
                     color: Colors.redAccent[200],
@@ -124,7 +126,9 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20.0,
             ),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/sad');
+              },
               icon: Icon(Icons.sentiment_very_dissatisfied,
                   color: Colors.blue[600]),
               style: ButtonStyle(
