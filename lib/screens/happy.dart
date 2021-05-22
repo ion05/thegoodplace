@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:thegoodplace/loaders/creating.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HappyPage extends StatefulWidget {
@@ -64,183 +66,213 @@ class HappyForm extends StatefulWidget {
 class _HappyFormState extends State<HappyForm> {
   final key = GlobalKey<FormState>();
   final _database = FirebaseFirestore.instance;
+  final _auth = FirebaseAuth.instance;
   String whyhappy;
   String advicetosad;
-  String advicetoanrgy;
+  String advicetoangry;
   bool loading = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.all(10.0),
-        child: Form(
-          key: key,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                TextFormField(
-                  onSaved: (val) {
-                    whyhappy = val;
-                  },
-                  validator: (val) {
-                    if (val.isEmpty) {
-                      return 'Reason cannot be empty';
-                    } else {
-                      return null;
-                    }
-                  },
-                  maxLines: 5,
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.sentiment_very_satisfied_outlined),
-                    // helperText: 'Why are you happy today?',
-                    labelText: 'Why are you feeling happy today ?',
-                    focusColor: Colors.greenAccent[200],
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(28.0)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(28.0)),
-                    labelStyle: TextStyle(
-                      fontFamily: 'Roboto-Condensed',
-                      fontSize: 18.0,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                TextFormField(
-                  onSaved: (val) {
-                    advicetosad = val;
-                  },
-                  validator: (val) {
-                    if (val.isEmpty) {
-                      return 'Reason cannot be empty';
-                    } else {
-                      return null;
-                    }
-                  },
-                  maxLines: 5,
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.sentiment_dissatisfied),
-                    // helperText: 'Why are you happy today?',
-                    labelText: 'How will you try to make a sad person happy?',
-                    focusColor: Colors.greenAccent[200],
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(28.0)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(28.0)),
-                    labelStyle: TextStyle(
-                      fontFamily: 'Roboto-Condensed',
-                      fontSize: 18.0,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                TextFormField(
-                  onSaved: (val) {
-                    advicetosad = val;
-                  },
-                  validator: (val) {
-                    if (val.isEmpty) {
-                      return 'Reason cannot be empty';
-                    } else {
-                      return null;
-                    }
-                  },
-                  maxLines: 5,
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.sentiment_very_dissatisfied),
-                    // helperText: 'Why are you happy today?',
-                    labelText: 'How will you try to make an agry person happy?',
-                    focusColor: Colors.greenAccent[200],
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(28.0)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(28.0)),
-                    labelStyle: TextStyle(
-                      fontFamily: 'Roboto-Condensed',
-                      fontSize: 18.0,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                TextButton(onPressed: () {}, child: Text('Hi')),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text(
-                  'Here are some spotify playlists for you',
-                  style: TextStyle(
-                      fontFamily: 'OpenSans-Condensed', fontSize: 20.0),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Row(
+    return loading
+        ? CreatingLoader()
+        : Container(
+            padding: EdgeInsets.all(10.0),
+            child: Form(
+              key: key,
+              child: SingleChildScrollView(
+                child: Column(
                   children: [
-                    ElevatedButton(
-                        onPressed: () {
-                          launch(
-                              "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC");
-                        },
-                        child: Row(
-                          children: [
-                            Image(
-                              height: 75.0,
-                              width: 75.0,
-                              image: AssetImage("assets/images/happyhits.jpg"),
-                            ),
-                            Text('Happy Hits',
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: 'OpenSans-Condensed')),
-                            SizedBox(
-                              height: 2.0,
-                              width: 10.0,
-                            ),
-                          ],
+                    TextFormField(
+                      onSaved: (val) {
+                        whyhappy = val;
+                      },
+                      validator: (val) {
+                        if (val.isEmpty) {
+                          return 'Reason cannot be empty';
+                        } else {
+                          return null;
+                        }
+                      },
+                      maxLines: 5,
+                      decoration: InputDecoration(
+                        suffixIcon:
+                            Icon(Icons.sentiment_very_satisfied_outlined),
+                        // helperText: 'Why are you happy today?',
+                        labelText: 'Why are you feeling happy today ?',
+                        focusColor: Colors.greenAccent[200],
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        labelStyle: TextStyle(
+                          fontFamily: 'Roboto-Condensed',
+                          fontSize: 18.0,
                         ),
-                        style: ButtonStyle(
-                          padding: MaterialStateProperty.all(EdgeInsets.zero),
-                        )),
-                    SizedBox(
-                      height: 2.0,
-                      width: 10.0,
+                      ),
                     ),
-                    ElevatedButton(
-                        onPressed: () {
-                          launch(
-                              "https://open.spotify.com/playlist/37i9dQZF1DXcEKFjZJYZcc");
-                        },
-                        child: Row(
-                          children: [
-                            Image(
-                              height: 75.0,
-                              width: 75.0,
-                              image:
-                                  AssetImage("assets/images/feelgoodpiano.jpg"),
-                            ),
-                            Text('Feel Good Piano',
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: 'OpenSans-Condensed')),
-                            SizedBox(
-                              height: 2.0,
-                              width: 10.0,
-                            ),
-                          ],
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    TextFormField(
+                      onSaved: (val) {
+                        advicetosad = val;
+                      },
+                      validator: (val) {
+                        if (val.isEmpty) {
+                          return 'Reason cannot be empty';
+                        } else {
+                          return null;
+                        }
+                      },
+                      maxLines: 5,
+                      decoration: InputDecoration(
+                        suffixIcon: Icon(Icons.sentiment_dissatisfied),
+                        // helperText: 'Why are you happy today?',
+                        labelText:
+                            'How will you try to make a sad person happy?',
+                        focusColor: Colors.greenAccent[200],
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        labelStyle: TextStyle(
+                          fontFamily: 'Roboto-Condensed',
+                          fontSize: 18.0,
                         ),
-                        style: ButtonStyle(
-                          padding: MaterialStateProperty.all(EdgeInsets.zero),
-                        ))
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    TextFormField(
+                      onSaved: (val) {
+                        advicetoangry = val;
+                      },
+                      validator: (val) {
+                        if (val.isEmpty) {
+                          return 'Reason cannot be empty';
+                        } else {
+                          return null;
+                        }
+                      },
+                      maxLines: 5,
+                      decoration: InputDecoration(
+                        suffixIcon: Icon(Icons.sentiment_very_dissatisfied),
+                        // helperText: 'Why are you happy today?',
+                        labelText:
+                            'How will you try to make an angry person happy?',
+                        focusColor: Colors.greenAccent[200],
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        labelStyle: TextStyle(
+                          fontFamily: 'Roboto-Condensed',
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextButton(
+                        onPressed: () async {
+                          key.currentState.save();
+                          if (key.currentState.validate()) {
+                            final _user = _auth.currentUser;
+                            setState(() {
+                              loading = true;
+                            });
+                            await _database
+                                .collection('happyppl')
+                                .doc(_user.uid)
+                                .set({
+                              "whyhappy": whyhappy,
+                              "advicetosad": advicetosad,
+                              "advicetoanrgy": advicetoangry,
+                            }).then((value) => print('Response Noted'));
+                            setState(() {
+                              loading = false;
+                            });
+                          }
+                        },
+                        child: Text('Submit')),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                      'Here are some spotify playlists for you',
+                      style: TextStyle(
+                          fontFamily: 'OpenSans-Condensed', fontSize: 20.0),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Row(
+                      children: [
+                        ElevatedButton(
+                            onPressed: () {
+                              launch(
+                                  "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC");
+                            },
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 75.0,
+                                  width: 75.0,
+                                  image:
+                                      AssetImage("assets/images/happyhits.jpg"),
+                                ),
+                                Text('Happy Hits',
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: 'OpenSans-Condensed')),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                            style: ButtonStyle(
+                              padding:
+                                  MaterialStateProperty.all(EdgeInsets.zero),
+                            )),
+                        SizedBox(
+                          height: 2.0,
+                          width: 10.0,
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              launch(
+                                  "https://open.spotify.com/playlist/37i9dQZF1DXcEKFjZJYZcc");
+                            },
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 75.0,
+                                  width: 75.0,
+                                  image: AssetImage(
+                                      "assets/images/feelgoodpiano.jpg"),
+                                ),
+                                Text('Feel Good Piano',
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: 'OpenSans-Condensed')),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                            style: ButtonStyle(
+                              padding:
+                                  MaterialStateProperty.all(EdgeInsets.zero),
+                            ))
+                      ],
+                    )
                   ],
-                )
-              ],
-            ),
-          ),
-        ));
+                ),
+              ),
+            ));
   }
 }
