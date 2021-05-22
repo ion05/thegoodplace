@@ -47,7 +47,7 @@ class _AngryPageState extends State<AngryPage> {
               Row(
                 children: [
                   SizedBox(
-                    width: 50.0,
+                    width: 20.0,
                   ),
                   ElevatedButton.icon(
                     icon: Icon(Icons.mode_comment, color: Colors.black),
