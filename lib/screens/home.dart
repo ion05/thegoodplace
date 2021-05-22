@@ -148,6 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            TextButton(
+                onPressed: () async {
+                  await _auth.signOut();
+                },
+                child: Text('Hi'))
           ],
         ),
       ),

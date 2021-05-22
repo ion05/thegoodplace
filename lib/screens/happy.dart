@@ -209,6 +209,7 @@ class _HappyFormState extends State<HappyForm> {
                       height: 10.0,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
                             onPressed: () {
@@ -237,10 +238,6 @@ class _HappyFormState extends State<HappyForm> {
                               padding:
                                   MaterialStateProperty.all(EdgeInsets.zero),
                             )),
-                        SizedBox(
-                          height: 2.0,
-                          width: 10.0,
-                        ),
                         ElevatedButton(
                             onPressed: () {
                               launch(
