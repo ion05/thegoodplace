@@ -15,7 +15,7 @@ class _AngryPageState extends State<AngryPage> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [HexColor('#8BC6EC'), HexColor('#9599E2')],
+          colors: [HexColor('#ff8a78'), HexColor('#ff7275'),HexColor('#ff3f6f')],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         )),
