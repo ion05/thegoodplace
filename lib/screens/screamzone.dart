@@ -14,8 +14,19 @@ class _ScreamZoneState extends State<ScreamZone> {
     return Scaffold(
         appBar: AppBar(
           title: Text('Scream Zone'),
+          backgroundColor: Colors.black,
         ),
         body: Container(
+             decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        HexColor('#ff8a78'),
+                        HexColor('#ff7275'),
+                        HexColor('#ff3f6f')
+                      ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                )),
             padding: EdgeInsets.all(10.0),
             width: double.infinity,
             height: double.infinity,
