@@ -14,6 +14,7 @@ class _ScreamZoneState extends State<ScreamZone> {
     return Scaffold(
         appBar: AppBar(
           title: Text('Scream Zone'),
+          backgroundColor: Colors.black,
         ),
         body: Container(
              decoration: BoxDecoration(
