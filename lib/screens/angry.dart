@@ -319,47 +319,6 @@ class _AngryPageState extends State<AngryPage> {
                           ),
                         ),
                         SizedBox(height: 10.0),
-                        ElevatedButton(
-                          onPressed: () {
-                            launch(
-                                "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
-                          },
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.white),
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                ),
-                              )),
-                          child: Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 55.0,
-                                  width: 55.0,
-                                  image: AssetImage(
-                                      "assets/images/songstoscream.png"),
-                                ),
-                                SizedBox(
-                                  width: 7.0,
-                                ),
-                                Text('Songs to Scream',
-                                    style: TextStyle(
-                                      fontSize: 20.0,
-                                      fontFamily: 'OpenSans-Condensed',
-                                      color: Colors.black,
-                                    )),
-                                SizedBox(
-                                  height: 2.0,
-                                  width: 10.0,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
                       ])
                     ])))));
   }
