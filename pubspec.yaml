@@ -39,6 +39,7 @@ dependencies:
   carousel_slider: ^3.0.0
   fluttertoast: ^8.0.7
   bubble: ^1.2.1
+  mailer: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
     - assets/images/sadbeats.jpg
     - assets/images/teardrop.jpg
     - assets/images/songstoscream.jpg
+    - assets/images/happyohappy.jpg
     - assets/images/mood.png
     - assets/images/vibe.png
     - assets/images/game1.png
