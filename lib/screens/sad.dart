@@ -148,7 +148,6 @@ class _SadPageState extends State<SadPage> {
                           Item2(),
                           Item3(),
                           Item4(),
-                          Item5(),
                         ],
                       ),
                     ]),
@@ -176,7 +175,7 @@ class _SadPageState extends State<SadPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=nkpyyJFLRl-DwL-orODvHA&utm_source=copy-link");
+                                "https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=l2YhxwjDS9S_gQRb5COMfA&utm_source=whatsapp");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -195,13 +194,13 @@ class _SadPageState extends State<SadPage> {
                                   height: 55.0,
                                   width: 55.0,
                                   image: AssetImage(
-                                      "assets/images/darkstormy.jpg"),
+                                      "assets/images/happyohappy.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.5,
                                 ),
                                 Text(
-                                  'Vibe',
+                                  'Happy-O-Happy',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontFamily: 'OpenSans-Condensed',
@@ -248,7 +247,7 @@ class _SadPageState extends State<SadPage> {
                                 SizedBox(
                                   width: 7.0,
                                 ),
-                                Text('Mood Booster',
+                                Text('Life Sucks',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
@@ -266,7 +265,7 @@ class _SadPageState extends State<SadPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=c692d291c6ee45d0");
+                                "https://open.spotify.com/playlist/37i9dQZF1DX6xZZEgC9Ubl?si=JNhizU_yQcCj5M6CBmsxXw&utm_source=copy-link&nd=1");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -285,12 +284,12 @@ class _SadPageState extends State<SadPage> {
                                   height: 55.0,
                                   width: 55.0,
                                   image: AssetImage(
-                                      "assets/images/happyohappy.jpg"),
+                                      "assets/images/teardrop.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.0,
                                 ),
-                                Text('Happy-O-Happy',
+                                Text('Tear Drop',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
@@ -333,9 +332,9 @@ class Item1 extends StatelessWidget {
           children: <Widget>[
             const ListTile(
               leading: Icon(Icons.games, size: 40),
-              title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.',
-                  style: TextStyle(fontSize: 10.0)),
+              title: Text('Audiosurf', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Audiosurf is a music-adapting puzzle racer where you use your own music to create your own experience',
+                  style: TextStyle(fontSize: 8.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -345,7 +344,7 @@ class Item1 extends StatelessWidget {
                     style: TextStyle(fontSize: 10.0),
                   ),
                   onPressed: () {
-                    /* ... */
+                    launch('https://store.steampowered.com/app/12900/AudioSurf/'),
                   },
                 ),
               ],
@@ -376,9 +375,9 @@ class Item2 extends StatelessWidget {
           children: <Widget>[
             const ListTile(
               leading: Icon(Icons.games, size: 40),
-              title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.',
-                  style: TextStyle(fontSize: 10.0)),
+              title: Text('World Of Goo', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('World of Goo is a puzzle video game developed and published by independent game developer 2D Boy.',
+                  style: TextStyle(fontSize:8.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -388,7 +387,7 @@ class Item2 extends StatelessWidget {
                     style: TextStyle(fontSize: 10.0),
                   ),
                   onPressed: () {
-                    /* ... */
+                    launch('https://play.google.com/store/apps/details?id=com.twodboy.worldofgoofull&hl=en_IN&gl=US'),
                   },
                 ),
               ],
@@ -419,9 +418,9 @@ class Item3 extends StatelessWidget {
           children: <Widget>[
             const ListTile(
               leading: Icon(Icons.games, size: 40),
-              title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.',
-                  style: TextStyle(fontSize: 10.0)),
+              title: Text('Botanicula', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Botanicula is a point-and-click adventure game developed by Amanita Design',
+                  style: TextStyle(fontSize: 8.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -431,7 +430,7 @@ class Item3 extends StatelessWidget {
                     style: TextStyle(fontSize: 10.0),
                   ),
                   onPressed: () {
-                    /* ... */
+                    launch('https://play.google.com/store/apps/details?id=air.com.amanitadesign.botanicula&hl=en_IN&gl=US'),
                   },
                 ),
               ],
@@ -462,9 +461,9 @@ class Item4 extends StatelessWidget {
           children: <Widget>[
             const ListTile(
               leading: Icon(Icons.games, size: 40),
-              title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.',
-                  style: TextStyle(fontSize: 10.0)),
+              title: Text("Recettear: An Item Shop's Tale", style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Recettear: An Item Shop’s Tale is a role-playing game developed by Japanese dōjin maker EasyGameStation . ',
+                  style: TextStyle(fontSize: 8.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -474,7 +473,7 @@ class Item4 extends StatelessWidget {
                     style: TextStyle(fontSize: 10.0),
                   ),
                   onPressed: () {
-                    /* ... */
+                    launch('https://store.steampowered.com/app/70400/Recettear_An_Item_Shops_Tale/'),
                   },
                 ),
               ],
@@ -486,45 +485,3 @@ class Item4 extends StatelessWidget {
   }
 }
 
-class Item5 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      width: 300,
-      height: 200,
-      padding: new EdgeInsets.all(20.0),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        color: Colors.white,
-        elevation: 10,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.games, size: 40),
-              title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.',
-                  style: TextStyle(fontSize: 10.0)),
-            ),
-            ButtonBar(
-              children: <Widget>[
-                RaisedButton(
-                  child: const Text(
-                    'Link',
-                    style: TextStyle(fontSize: 10.0),
-                  ),
-                  onPressed: () {
-                    /* ... */
-                  },
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    ));
-  }
-}

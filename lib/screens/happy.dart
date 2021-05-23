@@ -247,13 +247,13 @@ class _HappyFormState extends State<HappyForm> {
                               Image(
                                 height: 55.0,
                                 width: 55.0,
-                                image: AssetImage("assets/images/vibe.png"),
+                                image: AssetImage("assets/images/feel.png"),
                               ),
                               SizedBox(
                                 width: 7.5,
                               ),
                               Text(
-                                'Anger Management',
+                                'Feeling Good',
                                 style: TextStyle(
                                   fontSize: 20.0,
                                   fontFamily: 'OpenSans-Condensed',
@@ -275,8 +275,7 @@ class _HappyFormState extends State<HappyForm> {
                       SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          launch(
-                              "https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX7yRWDZJQ3Yz?si=-xt9mYF6R36YzfbLmEkwvw&utm_source=whatsapp");
                         },
                         style: ButtonStyle(
                             backgroundColor:
@@ -335,13 +334,12 @@ class _HappyFormState extends State<HappyForm> {
                               Image(
                                 height: 55.0,
                                 width: 55.0,
-                                image: AssetImage(
-                                    "assets/images/songstoscream.jpg"),
+                                image: AssetImage("assets/images/vibe.png"),
                               ),
                               SizedBox(
                                 width: 7.0,
                               ),
-                              Text('Songs to Scream',
+                              Text('Vibe',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontFamily: 'OpenSans-Condensed',
@@ -358,8 +356,7 @@ class _HappyFormState extends State<HappyForm> {
                       SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          launch(
-                              "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=JzsnHyQ8Qs69ApAMHt39KA&utm_source=whatsapp");
                         },
                         style: ButtonStyle(
                             backgroundColor:
@@ -377,13 +374,11 @@ class _HappyFormState extends State<HappyForm> {
                               Image(
                                 height: 55.0,
                                 width: 55.0,
-                                image: AssetImage(
-                                    "assets/images/songstoscream.png"),
-                              ),
+                                image: AssetImage("assets/images/mood.png"),                              ),
                               SizedBox(
                                 width: 7.0,
                               ),
-                              Text('Songs to Scream',
+                              Text('Mood Booster',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontFamily: 'OpenSans-Condensed',
