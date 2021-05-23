@@ -303,7 +303,7 @@ class _AngryPageState extends State<AngryPage> {
                                     height: 55.0,
                                     width: 55.0,
                                     image: AssetImage(
-                                        "assets/images/songstoscream.png"),
+                                        "assets/images/songstoscream.jpg"),
                                   ),
                                   SizedBox(
                                     width: 7.0,

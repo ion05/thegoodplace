@@ -149,11 +149,31 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            TextButton(
-                onPressed: () async {
-                  await _auth.signOut();
-                },
-                child: Text('Hi'))
+            SizedBox(
+              height: 20.0,
+            ),
+            TextButton.icon(
+              icon: Icon(Icons.exit_to_app),
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(28.0),
+                    ),
+                  )),
+              onPressed: () async {
+                await _auth.signOut();
+              },
+              label: Padding(
+                padding: EdgeInsets.all(5.0),
+                child: GradientText(
+                  text: "Sign Out",
+                  colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                  style: TextStyle(fontSize: 24.0),
+                ),
+              ),
+            )
           ],
         ),
       ),
