@@ -213,7 +213,7 @@ class _HappyFormState extends State<HappyForm> {
                     Column(children: [
                       ElevatedButton(
                         onPressed: () {
-                          launch("https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX9XIFQuFvzM4?si=a6d67c643a8f45f6");
                         },
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -229,13 +229,13 @@ class _HappyFormState extends State<HappyForm> {
                               Image(
                                 height: 55.0,
                                 width: 55.0,
-                                image: AssetImage("assets/images/vibe.png"),
+                                image: AssetImage("assets/images/feel.png"),
                               ),
                               SizedBox(
                                 width: 7.5,
                               ),
                               Text(
-                                'Anger Management',
+                                'Feeling Good',
                                 style: TextStyle(
                                   fontSize: 20.0,
                                   fontFamily: 'OpenSans-Condensed',
@@ -257,7 +257,45 @@ class _HappyFormState extends State<HappyForm> {
                       SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          launch("https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX7yRWDZJQ3Yz?si=-xt9mYF6R36YzfbLmEkwvw&utm_source=whatsapp");
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                              ),
+                            )),
+                        child: Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image(
+                                height: 55.0,
+                                width: 55.0,
+                                image: AssetImage("assets/images/vibe.png"),
+                              ),
+                              SizedBox(
+                                width: 7.0,
+                              ),
+                              Text('Vibe',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: 'OpenSans-Condensed',
+                                    color: Colors.black,
+                                  )),
+                              SizedBox(
+                                height: 2.0,
+                                width: 10.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10.0),
+                      ElevatedButton(
+                        onPressed: () {
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=JzsnHyQ8Qs69ApAMHt39KA&utm_source=whatsapp");
                         },
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -278,83 +316,7 @@ class _HappyFormState extends State<HappyForm> {
                               SizedBox(
                                 width: 7.0,
                               ),
-                              Text('To let it all go',
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'OpenSans-Condensed',
-                                    color: Colors.black,
-                                  )),
-                              SizedBox(
-                                height: 2.0,
-                                width: 10.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10.0),
-                      ElevatedButton(
-                        onPressed: () {
-                          launch("https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
-                        },
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
-                            )),
-                        child: Padding(
-                          padding: EdgeInsets.all(5.0),
-                          child: Row(
-                            children: [
-                              Image(
-                                height: 55.0,
-                                width: 55.0,
-                                image: AssetImage("assets/images/songstoscream.jpg"),
-                              ),
-                              SizedBox(
-                                width: 7.0,
-                              ),
-                              Text('Songs to Scream',
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'OpenSans-Condensed',
-                                    color: Colors.black,
-                                  )),
-                              SizedBox(
-                                height: 2.0,
-                                width: 10.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10.0),
-                      ElevatedButton(
-                        onPressed: () {
-                          launch("https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
-                        },
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
-                            )),
-                        child: Padding(
-                          padding: EdgeInsets.all(5.0),
-                          child: Row(
-                            children: [
-                              Image(
-                                height: 55.0,
-                                width: 55.0,
-                                image: AssetImage("assets/images/songstoscream.png"),
-                              ),
-                              SizedBox(
-                                width: 7.0,
-                              ),
-                              Text('Songs to Scream',
+                              Text('Mood Booster',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontFamily: 'OpenSans-Condensed',
