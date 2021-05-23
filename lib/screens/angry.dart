@@ -192,7 +192,7 @@ class _AngryPageState extends State<AngryPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
+                                "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -216,7 +216,7 @@ class _AngryPageState extends State<AngryPage> {
                                   width: 7.5,
                                 ),
                                 Text(
-                                  'Anger Management',
+                                  'Songs to Scream',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontFamily: 'OpenSans-Condensed',
@@ -239,7 +239,7 @@ class _AngryPageState extends State<AngryPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
+                                "https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -257,12 +257,12 @@ class _AngryPageState extends State<AngryPage> {
                                 Image(
                                   height: 55.0,
                                   width: 55.0,
-                                  image: AssetImage("assets/images/mood.png"),
+                                  image: AssetImage("assets/images/angermanage.png"),
                                 ),
                                 SizedBox(
                                   width: 7.0,
                                 ),
-                                Text('To let it all go',
+                                Text('Anger Management',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
@@ -280,7 +280,7 @@ class _AngryPageState extends State<AngryPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                                "https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=nkpyyJFLRl-DwL-orODvHA&utm_source=copy-link&nd=1");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -299,12 +299,12 @@ class _AngryPageState extends State<AngryPage> {
                                   height: 55.0,
                                   width: 55.0,
                                   image: AssetImage(
-                                      "assets/images/songstoscream.jpg"),
+                                      "assets/images/darkstormy.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.0,
                                 ),
-                                Text('Songs to Scream',
+                                Text('Dark & Stormy ',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
