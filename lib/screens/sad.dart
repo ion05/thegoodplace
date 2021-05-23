@@ -103,26 +103,6 @@ class _SadPageState extends State<SadPage> {
                       ),
                     ),
                     SizedBox(
-                      height: 7.5,
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        getDocuments();
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Hi'),
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
                       height: 15.0,
                     ),
                     Bubble(
