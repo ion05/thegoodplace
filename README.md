@@ -15,3 +15,31 @@ The biggest accomplishment that we're proud of is that we didn't let any challen
 We learned a lot during this hackathon. We learned how to use firebase authentication, firestore and how to correctly render data from firestore. We also learned how to make our app look pleasing and work in the way intended. 
 ## What's next for The Good Place
 Unlike most teams, who abandon their idea after the hackathon, we want to take it forward. We want to distribute it so that people can actually be benefitted from it. 
+
+# Run the App 
+
+To run the app on your physical device/emulator - 
+
+1) Fork it (optional)
+
+2) Clone it - 
+    ```git
+    git clone https://github.com/ion05/flight_to_mars.git 
+    ``` 
+    OR 
+    ```
+    gh repo clone ion05/flight_to_mars
+   ```
+ 3) Navigate to its directory - 
+       ``` 
+       cd flight_to_mars
+       ```
+4) Install all packages 
+      ```
+      flutter pub get 
+      ```
+5) Run it 
+      ```
+      flutter run 
+      ```
+      
