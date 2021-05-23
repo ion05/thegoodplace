@@ -38,6 +38,7 @@ dependencies:
   easy_gradient_text: ^1.0.0
   carousel_slider: ^3.0.0
   fluttertoast: ^8.0.7
+  bubble: ^1.2.1
 
 dev_dependencies:
   flutter_test:
