@@ -26,32 +26,33 @@ class _HappyPageState extends State<HappyPage> {
       //   ),
       // ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: statusbarheight),
-              height: 100.0 + statusbarheight,
-              width: double.infinity,
-              child: Text(
-                "Here's What You Can Do",
-                softWrap: true,
-                style:
-                    TextStyle(fontSize: 25.0, fontFamily: 'OpenSans-Condensed'),
-              ),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(28.0),
-                  gradient: LinearGradient(
-                    colors: [
-                      HexColor("#66ff99"),
-                      HexColor("#66ffcc"),
-                      HexColor('#99ffcc'),
-                      HexColor("#99ff99"),
-                    ],
-                    stops: [0.0, 0.2, 0.4, 0.6],
-                  )),
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                HexColor('#16e16e'),
+                HexColor('#188a8d')
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
-            HappyForm()
-          ],
+          ),
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: statusbarheight),
+                height: 100.0 + statusbarheight,
+                width: double.infinity,
+                child: Text(
+                  "Here's What You Can Do",
+                  softWrap: true,
+                  style: TextStyle(fontSize: 25.0, fontFamily: 'OpenSans-Condensed'),
+                ),
+              ),
+              HappyForm()
+            ],
+          ),
         ),
       ),
     );
@@ -95,18 +96,16 @@ class _HappyFormState extends State<HappyForm> {
                       },
                       maxLines: 5,
                       decoration: InputDecoration(
-                        suffixIcon:
-                            Icon(Icons.sentiment_very_satisfied_outlined),
+                        suffixIcon: Icon(Icons.sentiment_very_satisfied_outlined),
                         // helperText: 'Why are you happy today?',
                         labelText: 'Why are you feeling happy today ?',
-                        focusColor: Colors.greenAccent[200],
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(28.0)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(28.0)),
+                        focusColor: Colors.black,
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
                         labelStyle: TextStyle(
                           fontFamily: 'Roboto-Condensed',
                           fontSize: 18.0,
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -128,16 +127,14 @@ class _HappyFormState extends State<HappyForm> {
                       decoration: InputDecoration(
                         suffixIcon: Icon(Icons.sentiment_dissatisfied),
                         // helperText: 'Why are you happy today?',
-                        labelText:
-                            'How will you try to make a sad person happy?',
-                        focusColor: Colors.greenAccent[200],
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(28.0)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(28.0)),
+                        labelText: 'How will you try to make a sad person happy?',
+                        focusColor: Colors.black,
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
                         labelStyle: TextStyle(
                           fontFamily: 'Roboto-Condensed',
                           fontSize: 18.0,
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -159,16 +156,14 @@ class _HappyFormState extends State<HappyForm> {
                       decoration: InputDecoration(
                         suffixIcon: Icon(Icons.sentiment_very_dissatisfied),
                         // helperText: 'Why are you happy today?',
-                        labelText:
-                            'How will you try to make an angry person happy?',
-                        focusColor: Colors.greenAccent[200],
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(28.0)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(28.0)),
+                        labelText: 'How will you try to make an angry person happy?',
+                        focusColor: Colors.black,
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
                         labelStyle: TextStyle(
                           fontFamily: 'Roboto-Condensed',
                           fontSize: 18.0,
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -183,10 +178,7 @@ class _HappyFormState extends State<HappyForm> {
                             setState(() {
                               loading = true;
                             });
-                            await _database
-                                .collection('happyppl')
-                                .doc(_user.uid)
-                                .set({
+                            await _database.collection('happyppl').doc(_user.uid).set({
                               "whyhappy": whyhappy,
                               "advicetosad": advicetosad,
                               "advicetoangry": advicetoangry,
@@ -196,80 +188,187 @@ class _HappyFormState extends State<HappyForm> {
                             });
                           }
                         },
-                        child: Text('Submit')),
+                        child: Text('Submit', style: color: Colors.black,),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                        )),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Divider(
+                      thickness: 2.5,
+                      indent: 10,
+                      endIndent: 10,
+                    ),
                     SizedBox(
                       height: 10.0,
                     ),
                     Text(
                       'Here are some spotify playlists for you',
-                      style: TextStyle(
-                          fontFamily: 'OpenSans-Condensed', fontSize: 20.0),
+                      style: TextStyle(fontFamily: 'OpenSans-Condensed', fontSize: 20.0),
                     ),
                     SizedBox(
                       height: 10.0,
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ElevatedButton(
-                            onPressed: () {
-                              launch(
-                                  "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC");
-                            },
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 75.0,
-                                  width: 75.0,
-                                  image:
-                                      AssetImage("assets/images/happyhits.jpg"),
-                                ),
-                                Text('Happy Hits',
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontFamily: 'OpenSans-Condensed')),
-                                SizedBox(
-                                  height: 2.0,
-                                  width: 10.0,
-                                ),
-                              ],
-                            ),
-                            style: ButtonStyle(
-                              padding:
-                                  MaterialStateProperty.all(EdgeInsets.zero),
+                    Column(children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          launch("https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                              ),
                             )),
-                        SizedBox(
-                          height: 10.0,
+                        child: Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image(
+                                height: 55.0,
+                                width: 55.0,
+                                image: AssetImage("assets/images/vibe.png"),
+                              ),
+                              SizedBox(
+                                width: 7.5,
+                              ),
+                              Text(
+                                'Anger Management',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontFamily: 'OpenSans-Condensed',
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 2.0,
+                                width: 10.0,
+                              ),
+                            ],
+                          ),
                         ),
-                        ElevatedButton(
-                            onPressed: () {
-                              launch(
-                                  "https://open.spotify.com/playlist/37i9dQZF1DXcEKFjZJYZcc");
-                            },
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 75.0,
-                                  width: 75.0,
-                                  image: AssetImage(
-                                      "assets/images/feelgoodpiano.jpg"),
-                                ),
-                                Text('Feel Good Piano',
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontFamily: 'OpenSans-Condensed')),
-                                SizedBox(
-                                  height: 2.0,
-                                  width: 10.0,
-                                ),
-                              ],
-                            ),
-                            style: ButtonStyle(
-                              padding:
-                                  MaterialStateProperty.all(EdgeInsets.zero),
-                            ))
-                      ],
-                    )
+                      ),
+                      SizedBox(
+                        height: 2.0,
+                        width: 10.0,
+                      ),
+                      SizedBox(height: 10.0),
+                      ElevatedButton(
+                        onPressed: () {
+                          launch("https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                              ),
+                            )),
+                        child: Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image(
+                                height: 55.0,
+                                width: 55.0,
+                                image: AssetImage("assets/images/mood.png"),
+                              ),
+                              SizedBox(
+                                width: 7.0,
+                              ),
+                              Text('To let it all go',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: 'OpenSans-Condensed',
+                                    color: Colors.black,
+                                  )),
+                              SizedBox(
+                                height: 2.0,
+                                width: 10.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10.0),
+                      ElevatedButton(
+                        onPressed: () {
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                              ),
+                            )),
+                        child: Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image(
+                                height: 55.0,
+                                width: 55.0,
+                                image: AssetImage("assets/images/songstoscream.jpg"),
+                              ),
+                              SizedBox(
+                                width: 7.0,
+                              ),
+                              Text('Songs to Scream',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: 'OpenSans-Condensed',
+                                    color: Colors.black,
+                                  )),
+                              SizedBox(
+                                height: 2.0,
+                                width: 10.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10.0),
+                      ElevatedButton(
+                        onPressed: () {
+                          launch("https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                              ),
+                            )),
+                        child: Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image(
+                                height: 55.0,
+                                width: 55.0,
+                                image: AssetImage("assets/images/songstoscream.png"),
+                              ),
+                              SizedBox(
+                                width: 7.0,
+                              ),
+                              Text('Songs to Scream',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: 'OpenSans-Condensed',
+                                    color: Colors.black,
+                                  )),
+                              SizedBox(
+                                height: 2.0,
+                                width: 10.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ]),
                   ],
                 ),
               ),
