@@ -42,4 +42,8 @@ To run the app on your physical device/emulator -
       ```
       flutter run 
       ```
+6)Images
+<img src="https://media.discordapp.net/attachments/844252090304823336/846019772797812766/2f484100-5320-415f-a8a6-5686338f44c8.png?width=207&height=369">
+<img src="https://media.discordapp.net/attachments/844252090304823336/846019761803362364/9c96ecfb-8325-4fc1-8448-4a9933a06274.png?width=207&height=369">
+<img src="https://media.discordapp.net/attachments/844252090304823336/846019781499813888/4933a469-39cf-4c0e-a870-6f1530669dc2.png?width=207&height=369">
       
