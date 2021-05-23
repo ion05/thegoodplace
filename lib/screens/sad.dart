@@ -176,7 +176,7 @@ class _SadPageState extends State<SadPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=nkpyyJFLRl-DwL-orODvHA&utm_source=copy-link");
+                                "https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=l2YhxwjDS9S_gQRb5COMfA&utm_source=whatsapp");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -195,13 +195,13 @@ class _SadPageState extends State<SadPage> {
                                   height: 55.0,
                                   width: 55.0,
                                   image: AssetImage(
-                                      "assets/images/darkstormy.jpg"),
+                                      "assets/images/happyohappy.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.5,
                                 ),
                                 Text(
-                                  'Vibe',
+                                  'Happy-O-Happy',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontFamily: 'OpenSans-Condensed',
@@ -248,7 +248,7 @@ class _SadPageState extends State<SadPage> {
                                 SizedBox(
                                   width: 7.0,
                                 ),
-                                Text('Mood Booster',
+                                Text('Life Sucks',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
@@ -266,7 +266,7 @@ class _SadPageState extends State<SadPage> {
                         ElevatedButton(
                           onPressed: () {
                             launch(
-                                "https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=c692d291c6ee45d0");
+                                "https://open.spotify.com/playlist/37i9dQZF1DX6xZZEgC9Ubl?si=JNhizU_yQcCj5M6CBmsxXw&utm_source=copy-link&nd=1");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
@@ -285,12 +285,12 @@ class _SadPageState extends State<SadPage> {
                                   height: 55.0,
                                   width: 55.0,
                                   image: AssetImage(
-                                      "assets/images/happyohappy.jpg"),
+                                      "assets/images/teardrop.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.0,
                                 ),
-                                Text('Happy-O-Happy',
+                                Text('Tear Drop',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
