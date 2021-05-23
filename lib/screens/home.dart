@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20.0,
             ),
             Text(
-              'Lorem Ipsum',
+              "How're you feeling today?",
               style: TextStyle(
                 fontStyle: FontStyle.italic,
                 fontSize: 18.0,
