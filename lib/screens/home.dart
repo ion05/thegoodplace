@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool loading = false;
   Future<void> sendMail(bool loading) async {
     String username = 'aayanagarwal05@gmail.com';
-    String password = "Tiger@100";
+    String password = "#####";
     // Enter your own password here
     final user = _auth.currentUser;
     setState(() {

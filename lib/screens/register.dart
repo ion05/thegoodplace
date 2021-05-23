@@ -38,10 +38,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             body: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [
-                    HexColor('#16e16e'),
-                    HexColor('#188a8d')
-                  ],
+                  colors: [HexColor('#16e16e'), HexColor('#188a8d')],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 ),
@@ -52,19 +49,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    RaisedButton(
+                    TextButton(
                       onPressed: () async {
                         print('click');
                         setState(() {
                           loading = true;
                         });
-                        final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
-                        final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-                        final credential = GoogleAuthProvider.credential(accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
+                        final GoogleSignInAccount googleUser =
+                            await GoogleSignIn().signIn();
+                        final GoogleSignInAuthentication googleAuth =
+                            await googleUser.authentication;
+                        final credential = GoogleAuthProvider.credential(
+                            accessToken: googleAuth.accessToken,
+                            idToken: googleAuth.idToken);
                         try {
                           await _auth.signInWithCredential(credential);
                           final user = _auth.currentUser;
-                          await _database.collection('users').doc(user.uid).set({
+                          await _database
+                              .collection('users')
+                              .doc(user.uid)
+                              .set({
                             "name": user.displayName,
                             "email": user.email,
                           });
@@ -79,7 +83,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       //TODO: Replace this with signInButton
                       child: Text('Sign In'),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.white),
                       ),
                     )
                   ],

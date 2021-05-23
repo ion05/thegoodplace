@@ -30,10 +30,7 @@ class _HappyPageState extends State<HappyPage> {
           padding: EdgeInsets.all(20.0),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                HexColor('#16e16e'),
-                HexColor('#188a8d')
-              ],
+              colors: [HexColor('#16e16e'), HexColor('#188a8d')],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
@@ -47,7 +44,8 @@ class _HappyPageState extends State<HappyPage> {
                 child: Text(
                   "Here's What You Can Do",
                   softWrap: true,
-                  style: TextStyle(fontSize: 25.0, fontFamily: 'OpenSans-Condensed'),
+                  style: TextStyle(
+                      fontSize: 25.0, fontFamily: 'OpenSans-Condensed'),
                 ),
               ),
               HappyForm()
@@ -96,12 +94,15 @@ class _HappyFormState extends State<HappyForm> {
                       },
                       maxLines: 5,
                       decoration: InputDecoration(
-                        suffixIcon: Icon(Icons.sentiment_very_satisfied_outlined),
+                        suffixIcon:
+                            Icon(Icons.sentiment_very_satisfied_outlined),
                         // helperText: 'Why are you happy today?',
                         labelText: 'Why are you feeling happy today ?',
                         focusColor: Colors.black,
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
                         labelStyle: TextStyle(
                           fontFamily: 'Roboto-Condensed',
                           fontSize: 18.0,
@@ -127,10 +128,13 @@ class _HappyFormState extends State<HappyForm> {
                       decoration: InputDecoration(
                         suffixIcon: Icon(Icons.sentiment_dissatisfied),
                         // helperText: 'Why are you happy today?',
-                        labelText: 'How will you try to make a sad person happy?',
+                        labelText:
+                            'How will you try to make a sad person happy?',
                         focusColor: Colors.black,
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
                         labelStyle: TextStyle(
                           fontFamily: 'Roboto-Condensed',
                           fontSize: 18.0,
@@ -156,10 +160,13 @@ class _HappyFormState extends State<HappyForm> {
                       decoration: InputDecoration(
                         suffixIcon: Icon(Icons.sentiment_very_dissatisfied),
                         // helperText: 'Why are you happy today?',
-                        labelText: 'How will you try to make an angry person happy?',
+                        labelText:
+                            'How will you try to make an angry person happy?',
                         focusColor: Colors.black,
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28.0)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(28.0)),
                         labelStyle: TextStyle(
                           fontFamily: 'Roboto-Condensed',
                           fontSize: 18.0,
@@ -178,7 +185,10 @@ class _HappyFormState extends State<HappyForm> {
                             setState(() {
                               loading = true;
                             });
-                            await _database.collection('happyppl').doc(_user.uid).set({
+                            await _database
+                                .collection('happyppl')
+                                .doc(_user.uid)
+                                .set({
                               "whyhappy": whyhappy,
                               "advicetosad": advicetosad,
                               "advicetoangry": advicetoangry,
@@ -188,9 +198,13 @@ class _HappyFormState extends State<HappyForm> {
                             });
                           }
                         },
-                        child: Text('Submit', style: color: Colors.black,),
+                        child: Text('Submit',
+                            style: TextStyle(
+                              color: Colors.black,
+                            )),
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.white),
                         )),
                     SizedBox(
                       height: 10.0,
@@ -205,7 +219,8 @@ class _HappyFormState extends State<HappyForm> {
                     ),
                     Text(
                       'Here are some spotify playlists for you',
-                      style: TextStyle(fontFamily: 'OpenSans-Condensed', fontSize: 20.0),
+                      style: TextStyle(
+                          fontFamily: 'OpenSans-Condensed', fontSize: 20.0),
                     ),
                     SizedBox(
                       height: 10.0,
@@ -213,11 +228,14 @@ class _HappyFormState extends State<HappyForm> {
                     Column(children: [
                       ElevatedButton(
                         onPressed: () {
-                          launch("https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
+                          launch(
+                              "https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
                         },
                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
@@ -257,11 +275,14 @@ class _HappyFormState extends State<HappyForm> {
                       SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          launch("https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
+                          launch(
+                              "https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
                         },
                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
@@ -295,11 +316,14 @@ class _HappyFormState extends State<HappyForm> {
                       SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          launch("https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                          launch(
+                              "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
                         },
                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
@@ -311,7 +335,8 @@ class _HappyFormState extends State<HappyForm> {
                               Image(
                                 height: 55.0,
                                 width: 55.0,
-                                image: AssetImage("assets/images/songstoscream.jpg"),
+                                image: AssetImage(
+                                    "assets/images/songstoscream.jpg"),
                               ),
                               SizedBox(
                                 width: 7.0,
@@ -333,11 +358,14 @@ class _HappyFormState extends State<HappyForm> {
                       SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          launch("https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                          launch(
+                              "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
                         },
                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
@@ -349,7 +377,8 @@ class _HappyFormState extends State<HappyForm> {
                               Image(
                                 height: 55.0,
                                 width: 55.0,
-                                image: AssetImage("assets/images/songstoscream.png"),
+                                image: AssetImage(
+                                    "assets/images/songstoscream.png"),
                               ),
                               SizedBox(
                                 width: 7.0,
