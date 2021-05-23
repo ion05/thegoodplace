@@ -53,25 +53,25 @@ class _AngryPageState extends State<AngryPage> {
         ? CreatingLoader()
         : Scaffold(
             body: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-              colors: [
-                HexColor('#ff8a78'),
-                HexColor('#ff7275'),
-                HexColor('#ff3f6f')
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            )),
-            padding: EdgeInsets.all(20.0),
-            child: Center(
-              child: SingleChildScrollView(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  colors: [
+                    HexColor('#ff8a78'),
+                    HexColor('#ff7275'),
+                    HexColor('#ff3f6f')
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                )),
+                padding: EdgeInsets.all(20.0),
+                child: Center(
+                    child: SingleChildScrollView(
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
                       Text(
                         "Here's something to Help You Out!",
                         style: TextStyle(
@@ -188,145 +188,179 @@ class _AngryPageState extends State<AngryPage> {
                       SizedBox(
                         height: 15.0,
                       ),
-                      Column(
-                        children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              launch(
-                                  "https://open.spotify.com/playlist/37i9dQZF1DX7yRWDZJQ3Yz?si=-xt9mYF6R36YzfbLmEkwvw&utm");
-                            },
-                            style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
+                      Column(children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            launch(
+                                "https://open.spotify.com/playlist/15dInQbbACXXnEZLeRp0M5?si=iLiG8rGHQA66U5q_56XWBg&utm_source=whatsapp");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage("assets/images/vibe.png"),
+                                ),
+                                SizedBox(
+                                  width: 7.5,
+                                ),
+                                Text(
+                                  'Anger Management',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: 'OpenSans-Condensed',
+                                    color: Colors.black,
                                   ),
-                                )),
-                            child: Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Row(
-                                children: [
-                                  Image(
-                                    height: 55.0,
-                                    width: 55.0,
-                                    image: AssetImage("assets/images/vibe.png"),
-                                  ),
-                                  SizedBox(
-                                    width: 7.5,
-                                  ),
-                                  Text(
-                                    'Vibe',
+                                ),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 2.0,
+                          width: 10.0,
+                        ),
+                        SizedBox(height: 10.0),
+                        ElevatedButton(
+                          onPressed: () {
+                            launch(
+                                "https://open.spotify.com/playlist/71Xpaq3Hbpxz6w9yDmIsaH");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage("assets/images/mood.png"),
+                                ),
+                                SizedBox(
+                                  width: 7.0,
+                                ),
+                                Text('To let it all go',
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontFamily: 'OpenSans-Condensed',
                                       color: Colors.black,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.0,
-                                    width: 10.0,
-                                  ),
-                                ],
-                              ),
+                                    )),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            height: 2.0,
-                            width: 10.0,
-                          ),
-                          SizedBox(height: 10.0),
-                          ElevatedButton(
-                            onPressed: () {
-                              launch(
-                                  "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=JzsnHyQ8Qs69ApAMHt39KA&utm");
-                            },
-                            style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                )),
-                            child: Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Row(
-                                children: [
-                                  Image(
-                                    height: 55.0,
-                                    width: 55.0,
-                                    image: AssetImage("assets/images/mood.png"),
-                                  ),
-                                  SizedBox(
-                                    width: 7.0,
-                                  ),
-                                  Text('Mood Booster',
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'OpenSans-Condensed',
-                                        color: Colors.black,
-                                      )),
-                                  SizedBox(
-                                    height: 2.0,
-                                    width: 10.0,
-                                  ),
-                                ],
-                              ),
+                        ),
+                        SizedBox(height: 10.0),
+                        ElevatedButton(
+                          onPressed: () {
+                            launch(
+                                "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage(
+                                      "assets/images/songstoscream.jpg"),
+                                ),
+                                SizedBox(
+                                  width: 7.0,
+                                ),
+                                Text('Songs to Scream',
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'OpenSans-Condensed',
+                                      color: Colors.black,
+                                    )),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(height: 10.0),
-                          ElevatedButton(
-                            onPressed: () {
-                              launch(
-                                  "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
-                            },
-                            style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                )),
-                            child: Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Row(
-                                children: [
-                                  Image(
-                                    height: 55.0,
-                                    width: 55.0,
-                                    image: AssetImage(
-                                        "assets/images/songstoscream.jpg"),
-                                  ),
-                                  SizedBox(
-                                    width: 7.0,
-                                  ),
-                                  Text('Songs to Scream',
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'OpenSans-Condensed',
-                                        color: Colors.black,
-                                      )),
-                                  SizedBox(
-                                    height: 2.0,
-                                    width: 10.0,
-                                  ),
-                                ],
-                              ),
+                        ),
+                        SizedBox(height: 10.0),
+                        ElevatedButton(
+                          onPressed: () {
+                            launch(
+                                "https://open.spotify.com/playlist/37i9dQZF1DX4mWCZw6qYIw?si=df151ed3cd514a78&nd=1");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Row(
+                              children: [
+                                Image(
+                                  height: 55.0,
+                                  width: 55.0,
+                                  image: AssetImage(
+                                      "assets/images/songstoscream.png"),
+                                ),
+                                SizedBox(
+                                  width: 7.0,
+                                ),
+                                Text('Songs to Scream',
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'OpenSans-Condensed',
+                                      color: Colors.black,
+                                    )),
+                                SizedBox(
+                                  height: 2.0,
+                                  width: 10.0,
+                                ),
+                              ],
                             ),
                           ),
-                        ],
-                      ),
-                    ]),
-              ),
-            ),
-          ));
+                        ),
+                      ])
+                    ])))));
   }
 }
