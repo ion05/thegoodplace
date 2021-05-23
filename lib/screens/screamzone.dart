@@ -16,6 +16,16 @@ class _ScreamZoneState extends State<ScreamZone> {
           title: Text('Scream Zone'),
         ),
         body: Container(
+             decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        HexColor('#ff8a78'),
+                        HexColor('#ff7275'),
+                        HexColor('#ff3f6f')
+                      ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                )),
             padding: EdgeInsets.all(10.0),
             width: double.infinity,
             height: double.infinity,
