@@ -4,6 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:math';
+import 'package:bubble/bubble.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:thegoodplace/loaders/creating.dart';
 
@@ -74,29 +75,57 @@ class _SadPageState extends State<SadPage> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Text(
-                      "Here are somethings to make you feel better",
-                      style: TextStyle(fontFamily: 'Nunito-Sans'),
-                    ),
-                    SizedBox(
-                      height: 50.0,
-                    ),
-                    Text("Here's some advice!"),
-                    TextButton(
-                        onPressed: () {
-                          getDocuments();
-                        },
-                        child: Text('Hi')),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Text(advicetoshow),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Text("Wanna play some games ?", style: TextStyle(fontFamily: 'Nunito-Sans', fontSize: 20.0)),
+                    Text(
+                      "Here are somethings to make you feel better",
+                      style: TextStyle(
+                        fontFamily: 'Nunito-Sans',
+                        color: Colors.white,
+                        fontSize: 30.0,
+                      ),
+                    ),
+                    Divider(
+                      thickness: 2.5,
+                      indent: 10,
+                      endIndent: 10,
+                    ),
+                    SizedBox(
+                      height: 40.0,
+                    ),
+                    Text(
+                      "Here's some advice!",
+                      style: TextStyle(
+                        fontFamily: 'Nunito-Sans',
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Bubble(
+                      child: Text(advicetoshow),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Text(
+                      "Wanna play some games ?",
+                      style: TextStyle(
+                        fontFamily: 'Nunito-Sans',
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
                     SizedBox(
                       height: 10.0,
+                    ),
+                    Divider(
+                      thickness: 2.5,
+                      indent: 10,
+                      endIndent: 10,
                     ),
                     Column(children: [
                       CarouselSlider(
@@ -118,7 +147,8 @@ class _SadPageState extends State<SadPage> {
                           Item1(),
                           Item2(),
                           Item3(),
-                          Item4()
+                          Item4(),
+                          Item5(),
                         ],
                       ),
                       // Row(
@@ -136,12 +166,21 @@ class _SadPageState extends State<SadPage> {
                       //   ],
                       // )
                     ]),
+                    Divider(
+                      thickness: 2.5,
+                      indent: 10,
+                      endIndent: 10,
+                    ),
                     SizedBox(
                       height: 20.0,
                     ),
                     Text(
                       'Here are Some Spotify Playlists for you',
-                      style: TextStyle(fontFamily: 'Nunito-Sans', fontSize: 15.0),
+                      style: TextStyle(
+                        fontFamily: 'Nunito-Sans',
+                        fontSize: 15.0,
+                        color: Colors.white,
+                      ),
                     ),
                     SizedBox(
                       height: 10.0,
@@ -230,7 +269,7 @@ class _SadPageState extends State<SadPage> {
                           ),
                         ),
                         SizedBox(height: 10.0),
-                                ElevatedButton(
+                        ElevatedButton(
                           onPressed: () {
                             launch("https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=c692d291c6ee45d0");
                           },
@@ -280,119 +319,209 @@ class _SadPageState extends State<SadPage> {
 class Item1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      child: Row(
-        children: [
-          SizedBox(
-            width: 40.0,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image(
-                image: AssetImage('assets/images/game1.png'),
-                height: 150.0,
-                width: 150.0,
-              )
-            ],
-          ),
-          SizedBox(
-            width: 50.0,
-          ),
-          Icon(Icons.chevron_right),
-        ],
+    return Center(
+        child: Container(
+      width: 300,
+      height: 200,
+      padding: new EdgeInsets.all(20.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.white,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.games, size: 40),
+              title: Text('Game', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+            ),
+            ButtonBar(
+              children: <Widget>[
+                RaisedButton(
+                  child: const Text(
+                    'Link',
+                    style: TextStyle(fontSize: 10.0),
+                  ),
+                  onPressed: () {
+                    /* ... */
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-    );
+    ));
   }
 }
 
 class Item2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      child: Row(
-        children: [
-          SizedBox(
-            width: 40.0,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image(
-                image: AssetImage('assets/images/game2.png'),
-                height: 150.0,
-                width: 150.0,
-              )
-            ],
-          ),
-          SizedBox(
-            width: 50.0,
-          ),
-          Icon(Icons.chevron_right),
-        ],
+    return Center(
+        child: Container(
+      width: 300,
+      height: 200,
+      padding: new EdgeInsets.all(20.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.white,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.games, size: 40),
+              title: Text('Game', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+            ),
+            ButtonBar(
+              children: <Widget>[
+                RaisedButton(
+                  child: const Text(
+                    'Link',
+                    style: TextStyle(fontSize: 10.0),
+                  ),
+                  onPressed: () {
+                    /* ... */
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-    );
+    ));
   }
 }
 
 class Item3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      child: Row(
-        children: [
-          SizedBox(
-            width: 40.0,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image(
-                image: AssetImage('assets/images/game3.png'),
-                height: 150.0,
-                width: 150.0,
-              )
-            ],
-          ),
-          SizedBox(
-            width: 50.0,
-          ),
-          Icon(Icons.chevron_right),
-        ],
+    return Center(
+        child: Container(
+      width: 300,
+      height: 200,
+      padding: new EdgeInsets.all(20.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.white,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.games, size: 40),
+              title: Text('Game', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+            ),
+            ButtonBar(
+              children: <Widget>[
+                RaisedButton(
+                  child: const Text(
+                    'Link',
+                    style: TextStyle(fontSize: 10.0),
+                  ),
+                  onPressed: () {
+                    /* ... */
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-    );
+    ));
   }
 }
 
 class Item4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      child: Row(
-        children: [
-          SizedBox(
-            width: 40.0,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image(
-                image: AssetImage('assets/images/game4.png'),
-                height: 150.0,
-                width: 150.0,
-              )
-            ],
-          ),
-          SizedBox(
-            width: 50.0,
-          ),
-          Icon(Icons.chevron_right),
-        ],
+    return Center(
+        child: Container(
+      width: 300,
+      height: 200,
+      padding: new EdgeInsets.all(20.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.white,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.games, size: 40),
+              title: Text('Game', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+            ),
+            ButtonBar(
+              children: <Widget>[
+                RaisedButton(
+                  child: const Text(
+                    'Link',
+                    style: TextStyle(fontSize: 10.0),
+                  ),
+                  onPressed: () {
+                    /* ... */
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-    );
+    ));
+  }
+}
+
+class Item5 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Container(
+      width: 300,
+      height: 200,
+      padding: new EdgeInsets.all(20.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.white,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.games, size: 40),
+              title: Text('Game', style: TextStyle(fontSize: 20.0)),
+              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+            ),
+            ButtonBar(
+              children: <Widget>[
+                RaisedButton(
+                  child: const Text(
+                    'Link',
+                    style: TextStyle(fontSize: 10.0),
+                  ),
+                  onPressed: () {
+                    /* ... */
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    ));
   }
 }
