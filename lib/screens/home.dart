@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,20 +14,35 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _auth = FirebaseAuth.instance;
+
+  Future<void> sendMail() async {
+    String username = 'aayanagarwal05@gmail.com';
+    String password = '#####';
+    // Enter your own password here
+    final user = _auth.currentUser;
+    final smtpServer = gmail(username, password);
+    final message = Message()
+      ..from = Address("aayanagarwal05@gmail.com", 'Your name')
+      ..recipients.add(user.email)
+      ..subject = 'Emotional alert for ${user.displayName}'
+      ..text =
+          '${user.displayName} has listed you as their emergency contact in mental health related issues. They have alerted an SOS. Contact them immediately!';
+
+    try {
+      final sendReport = await send(message, smtpServer);
+      print('Message sent: ' + sendReport.toString());
+    } on MailerException catch (e) {
+      print('Message not sent.');
+      print(e.toString());
+      for (var p in e.problems) {
+        print('Problem: ${p.code}: ${p.msg}');
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Home Screen'),
-      //   actions: [
-      //     IconButton(
-      //       icon: Icon(Icons.exit_to_app),
-      //       onPressed: () async {
-      //         await _auth.signOut();
-      //       },
-      //     )
-      //   ],
-      // ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -152,28 +169,58 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20.0,
             ),
-            TextButton.icon(
-              icon: Icon(Icons.exit_to_app),
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(28.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton.icon(
+                  icon: Icon(Icons.exit_to_app),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(28.0),
+                        ),
+                      )),
+                  onPressed: () async {
+                    await _auth.signOut();
+                  },
+                  label: Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: GradientText(
+                      text: "Sign Out",
+                      colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                      style: TextStyle(fontSize: 24.0),
                     ),
-                  )),
-              onPressed: () async {
-                await _auth.signOut();
-              },
-              label: Padding(
-                padding: EdgeInsets.all(5.0),
-                child: GradientText(
-                  text: "Sign Out",
-                  colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
-                  style: TextStyle(fontSize: 24.0),
+                  ),
                 ),
-              ),
-            )
+                SizedBox(
+                  width: 20.0,
+                ),
+                TextButton.icon(
+                  icon: Icon(Icons.alarm),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(28.0),
+                        ),
+                      )),
+                  onPressed: () async {
+                    sendMail();
+                  },
+                  label: Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: GradientText(
+                      text: "SOS",
+                      colors: <Color>[HexColor('#8BC6EC'), HexColor('#9599E2')],
+                      style: TextStyle(fontSize: 24.0),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),

@@ -20,9 +20,7 @@ class _SadPageState extends State<SadPage> {
   String advicetoshow = "";
   bool loading = false;
   Future<String> getDocuments() async {
-    var advices = [
-      'Tomorrow is a new day'
-    ];
+    var advices = ['Tomorrow is a new day'];
     setState(() {
       loading = true;
     });
@@ -106,6 +104,7 @@ class _SadPageState extends State<SadPage> {
                       height: 15.0,
                     ),
                     Bubble(
+                      showNip: true,
                       child: Text(advicetoshow),
                     ),
                     SizedBox(
@@ -138,7 +137,8 @@ class _SadPageState extends State<SadPage> {
                           height: 200.0,
                           // autoPlay: true,
                           autoPlayInterval: Duration(seconds: 10),
-                          autoPlayAnimationDuration: Duration(milliseconds: 800),
+                          autoPlayAnimationDuration:
+                              Duration(milliseconds: 800),
                           autoPlayCurve: Curves.fastOutSlowIn,
                           pauseAutoPlayOnTouch: true,
                           aspectRatio: 2.0,
@@ -151,20 +151,6 @@ class _SadPageState extends State<SadPage> {
                           Item5(),
                         ],
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.center,
-                      //   children: [
-                      //     Container(
-                      //       width: 10.0,
-                      //       height: 10.0,
-                      //       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                      //       decoration: BoxDecoration(
-                      //         shape: BoxShape.circle,
-                      //         color: _currentIndex == index ? Colors.blueAccent : Colors.grey,
-                      //       ),
-                      //     )
-                      //   ],
-                      // )
                     ]),
                     Divider(
                       thickness: 2.5,
@@ -189,11 +175,14 @@ class _SadPageState extends State<SadPage> {
                       children: [
                         ElevatedButton(
                           onPressed: () {
-                            launch("https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=nkpyyJFLRl-DwL-orODvHA&utm_source=copy-link");
+                            launch(
+                                "https://open.spotify.com/playlist/37i9dQZF1DX2pSTOxoPbx9?si=nkpyyJFLRl-DwL-orODvHA&utm_source=copy-link");
                           },
                           style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
@@ -205,7 +194,8 @@ class _SadPageState extends State<SadPage> {
                                 Image(
                                   height: 55.0,
                                   width: 55.0,
-                                  image: AssetImage("assets/images/darkstormy.png"),
+                                  image: AssetImage(
+                                      "assets/images/darkstormy.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.5,
@@ -233,11 +223,14 @@ class _SadPageState extends State<SadPage> {
                         SizedBox(height: 10.0),
                         ElevatedButton(
                           onPressed: () {
-                            launch("https://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634?si=YOfeECGmRTCy8JSHGu9GGg&utm_source=copy-link");
+                            launch(
+                                "https://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634?si=YOfeECGmRTCy8JSHGu9GGg&utm_source=copy-link");
                           },
                           style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
@@ -249,7 +242,8 @@ class _SadPageState extends State<SadPage> {
                                 Image(
                                   height: 55.0,
                                   width: 55.0,
-                                  image: AssetImage("assets/images/lifesucks.png"),
+                                  image:
+                                      AssetImage("assets/images/lifesucks.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.0,
@@ -271,11 +265,14 @@ class _SadPageState extends State<SadPage> {
                         SizedBox(height: 10.0),
                         ElevatedButton(
                           onPressed: () {
-                            launch("https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=c692d291c6ee45d0");
+                            launch(
+                                "https://open.spotify.com/playlist/37i9dQZF1DX2x1COalpsUi?si=c692d291c6ee45d0");
                           },
                           style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
@@ -287,7 +284,8 @@ class _SadPageState extends State<SadPage> {
                                 Image(
                                   height: 55.0,
                                   width: 55.0,
-                                  image: AssetImage("assets/images/lifesucks.png"),
+                                  image: AssetImage(
+                                      "assets/images/happyohappy.jpg"),
                                 ),
                                 SizedBox(
                                   width: 7.0,
@@ -336,7 +334,8 @@ class Item1 extends StatelessWidget {
             const ListTile(
               leading: Icon(Icons.games, size: 40),
               title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+              subtitle: Text('Best of Sonu Nigam Music.',
+                  style: TextStyle(fontSize: 10.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -378,7 +377,8 @@ class Item2 extends StatelessWidget {
             const ListTile(
               leading: Icon(Icons.games, size: 40),
               title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+              subtitle: Text('Best of Sonu Nigam Music.',
+                  style: TextStyle(fontSize: 10.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -420,7 +420,8 @@ class Item3 extends StatelessWidget {
             const ListTile(
               leading: Icon(Icons.games, size: 40),
               title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+              subtitle: Text('Best of Sonu Nigam Music.',
+                  style: TextStyle(fontSize: 10.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -462,7 +463,8 @@ class Item4 extends StatelessWidget {
             const ListTile(
               leading: Icon(Icons.games, size: 40),
               title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+              subtitle: Text('Best of Sonu Nigam Music.',
+                  style: TextStyle(fontSize: 10.0)),
             ),
             ButtonBar(
               children: <Widget>[
@@ -504,7 +506,8 @@ class Item5 extends StatelessWidget {
             const ListTile(
               leading: Icon(Icons.games, size: 40),
               title: Text('Game', style: TextStyle(fontSize: 20.0)),
-              subtitle: Text('Best of Sonu Nigam Music.', style: TextStyle(fontSize: 10.0)),
+              subtitle: Text('Best of Sonu Nigam Music.',
+                  style: TextStyle(fontSize: 10.0)),
             ),
             ButtonBar(
               children: <Widget>[
